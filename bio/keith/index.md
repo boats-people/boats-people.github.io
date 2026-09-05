@@ -1,3 +1,6 @@
+---
+title: Keith's Bio
+---
 # Keith's Bio
 ## [Back](https://boats-people.github.io)
 
