@@ -2,6 +2,6 @@
 ## [Back](https://boats-people.github.io)
 
 ## Gender(s):
-Bisexual [wiki]()
+Bisexual [wiki](https://en.wikipedia.org/wiki/Bisexuality)
 
-Asexual [wiki]()
+Asexual [wiki](https://en.wikipedia.org/wiki/Asexuality)
