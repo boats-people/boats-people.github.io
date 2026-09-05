@@ -12,4 +12,4 @@ title: BOAT Rules
 
 4. Please help others with homework if they ask for help and you are available.
 
-5. If anyone is confused about an LGBTQ+ term, please reply with the [wikipedia](en.wikipedia.org) page.
+5. If anyone is confused about an LGBTQ+ term, please reply with the [wikipedia](https://en.wikipedia.org) page.
