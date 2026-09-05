@@ -1,3 +1,6 @@
+---
+title: Dev Edit Log
+---
 # Edit Log:
 ## [Back](https://boats-people.github.io)
 
