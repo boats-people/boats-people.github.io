@@ -2,7 +2,7 @@
 title: BOAT Rules
 ---
 # Rules
-## [Back](boats-people.github.io)
+## [Back](https://boats-people.github.io)
 
 1. Do not share specific info because some parents check their kid's messages.
 
