@@ -6,7 +6,7 @@
 
 [Keith](https://boats-people.github.io/bio/keith)
 
-[Anais](https://boats-people.github.io/bio/Anais)
+[Anais](https://boats-people.github.io/bio/anais)
 
 [A'mour](https://boats-people.github.io/bio/amour)
 
