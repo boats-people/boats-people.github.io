@@ -10,4 +10,4 @@ Aegosexual [wiki](https://en.wikipedia.org/wiki/Aegosexuality)
 Omnisexual (80% F 20% M) [wiki](https://en.wikipedia.org/wiki/Omnisexuality) 
 
 Photo:
-<img width="2120" height="1590" alt="image0" src="https://github.com/user-attachments/assets/81d09dd3-6c63-4645-bfd6-9b7f542984f0" />
+<img width="1060" height="795" alt="image0" src="https://github.com/user-attachments/assets/81d09dd3-6c63-4645-bfd6-9b7f542984f0" />
