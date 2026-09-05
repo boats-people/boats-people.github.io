@@ -4,6 +4,8 @@ title: BOAT's home
 # Welcome to the BOAT's homepage!
 ## Click [Here](https://forms.gle/6zF4fEW7GCkg46wV8) for any questions, help, and bug reports
 
+## Rules are [Here](boats-people.github.io/rules)
+
 ### Person Bios:
 
 [Anastasia](https://boats-people.github.io/bio/anastasia)
