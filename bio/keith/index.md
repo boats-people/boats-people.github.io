@@ -2,6 +2,6 @@
 ## [Back](https://boats-people.github.io)
 
 ## Gender(s):
-Demisexual [wiki]()
+Demisexual [wiki](https://en.wikipedia.org/wiki/Demisexuality)
 
-Transgender [wiki]()
+Transgender [wiki](https://en.wikipedia.org/wiki/Transgender)
