@@ -8,3 +8,4 @@ title: BOAT's home
 
 ## Bio List [Here](https://boats-people.github.io/bio)
 
+###### (uninportant) Dev Edit page [Here](https://boats-people.github.io/edits) 
