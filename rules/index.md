@@ -1,3 +1,6 @@
+---
+title: BOAT Rules
+---
 # Rules
 ## [Back](boats-people.github.io)
 
