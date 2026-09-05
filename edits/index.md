@@ -4,6 +4,9 @@ title: Dev Edit Log
 # Edit Log:
 ## [Back](https://boats-people.github.io)
 
+## 9/5/26 5:40 PM
+added the markdown testing page at https://boats-people.github.io/testingpage
+
 ## 9/5/26 5:23 PM
 added small text with a link to the new edits page in the homepage
 
