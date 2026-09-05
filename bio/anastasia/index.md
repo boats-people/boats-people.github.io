@@ -11,4 +11,5 @@ Omnisexual (80% F 20% M) [wiki](https://en.wikipedia.org/wiki/Omnisexuality)
 
 
 # Photo:
-<img width="2120" height="1590" alt="image0" src="https://github.com/user-attachments/assets/81d09dd3-6c63-4645-bfd6-9b7f542984f0" />
+
+<img width="2120" height="1590" alt="image0" src="https://github.com/user-attachments/assets/5c8fd47b-27ed-4928-9c13-c59baf8f5899" />
