@@ -1,3 +1,6 @@
+---
+title: A'mour's Bio
+---
 # A'mour's Bio
 ## [Back](https://boats-people.github.io)
 
