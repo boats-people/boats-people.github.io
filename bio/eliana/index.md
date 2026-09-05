@@ -1,3 +1,6 @@
+---
+title: Eliana's Bio
+---
 # Eliana's Bio
 ## [Back](https://boats-people.github.io)
 
