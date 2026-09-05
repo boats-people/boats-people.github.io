@@ -1,3 +1,6 @@
+---
+title: BOAT's home
+---
 # Welcome to the BOAT's homepage!
 
 ### Person Bios:
