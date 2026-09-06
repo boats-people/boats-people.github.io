@@ -5,4 +5,4 @@
 
 [Anastasia](https://boats-people.github.io/bio/anastasia) - Group creator
 
-###### [secret](https://boats-people.github.io/crash)
+###### [secret](https://boats-people.github.io/games)
