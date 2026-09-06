@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Google Classroom
+    </title>
+  </head>
+  <body>
+    <h2>
+      Enter your info
+    </h2>
+    <label>
+      Username:
+    </label>
+    <input id="username" type="text" />
+    <br />
+    <br />
+    <label>
+      Password:
+    </label>
+    <input id="password" type="password" />
+    <br />
+    <br />
+    <button onclick="login()">
+      Login
+    </button>
+    <p id="message">
+    </p>
+    <script>
+      // Replace the placeholder hash with your real SHA-256 hash.
+const users = {
+    &#34;User&#34;: &#34;5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8&#34;
+};
+
+const bannedUsers = [&#34;BanPlaceholder&#34;];
+
+async function sha256(text) {
+    const data = new TextEncoder().encode(text);
+    const hash = await crypto.subtle.digest(&#34;SHA-256&#34;, data);
+
+    return [...new Uint8Array(hash)]
+        .map(b =&gt; b.toString(16).padStart(2, &#34;0&#34;))
+        .join(&#34;&#34;);
+}
+
+async function login() {
+    const username = document.getElementById(&#34;username&#34;).value.trim();
+    const password = document.getElementById(&#34;password&#34;).value;
+    const message = document.getElementById(&#34;message&#34;);
+
+    if (bannedUsers.includes(username)) {
+        message.innerHTML = &#34;Sorry, you are banned from the system.&#34;;
+        return;
+    }
+
+    if (!(username in users)) {
+        message.innerHTML = &#34;Username not found.&#34;;
+        return;
+    }
+
+    const enteredHash = await sha256(password);
+    const correctHash = users[username];
+
+    if (enteredHash === correctHash) {
+message.innerHTML = `
+&lt;h3&gt;Hello ${username}!&lt;/h3&gt;
+
+&lt;b&gt;UNBLOCKED GAME LIST:&lt;/b&gt;&lt;br&gt;&lt;br&gt;
+
+WEBSITE: &lt;a href=&#34;https://escaperoadx.github.io&#34; target=&#34;_blank&#34;&gt;Escape Road&lt;/a&gt; - Escape Road&lt;br&gt;&lt;br&gt;
+
+WEBSITE: &lt;a href=&#34;https://ovoclassic-pro.github.io&#34; target=&#34;_blank&#34;&gt;OvO Unblocked&lt;/a&gt; - OVO + a lot others&lt;br&gt;&lt;br&gt;
+
+WEBSITE: &lt;a href=&#34;https://calcsolver.net&#34; target=&#34;_blank&#34;&gt;CalcSolver&lt;/a&gt; - Turn on code mode then put in 0000&lt;br&gt;&lt;br&gt;
+
+WEBSITE: &lt;a href=&#34;https://260326moon.firebaseapp.com&#34; target=&#34;_blank&#34;&gt;Cloudmoon&lt;/a&gt; - Cloud gaming for free&lt;br&gt;&lt;br&gt;
+
+WEBSITE: &lt;a href=&#34;https://shsgames.github.io/?search=&#34; target=&#34;_blank&#34;&gt;SHSGAMES&lt;/a&gt; - CROWNED FOR MOST GAMES👑&lt;br&gt;&lt;br&gt;
+
+WEBSITE: &lt;a href=&#34;https://ball-bang-online.github.io&#34; target=&#34;_blank&#34;&gt;BallBang&lt;/a&gt; - lots of games&lt;br&gt;&lt;br&gt;
+
+WEBSITE: &lt;a href=&#34;https://unblockedgames6969.gitlab.io&#34; target=&#34;_blank&#34;&gt;ubg6969&lt;/a&gt; - more games&lt;br&gt;&lt;br&gt;
+
+WEBSITE: &lt;a href=&#34;https://startmyeducation.net/signin.html&#34; target=&#34;_blank&#34;&gt;Startmyeducation&lt;/a&gt; - password funni&lt;br&gt;&lt;br&gt;
+
+WEBSITE: &lt;a href=&#34;https://sites.google.com/view/nebulaportal&#34; target=&#34;_blank&#34;&gt;Nebula Portal&lt;/a&gt; - more games&lt;br&gt;&lt;br&gt;
+
+WEBSITE: &lt;a href=&#34;https://sites.google.com/view/tyronesgameshack&#34; target=&#34;_blank&#34;&gt;Tyrone&#39;s Unblocked Games&lt;/a&gt; - good game portal&lt;br&gt;&lt;br&gt;
+
+WEBSITE: &lt;a href=&#34;https://thepizzaedition-games.github.io&#34; target=&#34;_blank&#34;&gt;The Pizza Edition Unblocked&lt;/a&gt; - similar to ovoclassic-pro&lt;br&gt;&lt;br&gt;
+
+WEBSITE: &lt;a href=&#34;https://sites.google.com/view/lotsogames&#34; target=&#34;_blank&#34;&gt;LotsOGames&lt;/a&gt; - Lots of games lol&lt;br&gt;&lt;br&gt;
+
+WEBSITE: &lt;a href=&#34;https://sites.google.com/view/unblockedgame76&#34; target=&#34;_blank&#34;&gt;Unblocked Games 76&lt;/a&gt; - unblocked gamers&lt;br&gt;&lt;br&gt;
+
+WEBSITE: &lt;a href=&#34;https://sites.google.com/view/chil-zone-return/home&#34; target=&#34;_blank&#34;&gt;MOVIESS&lt;/a&gt; - movies and stuff&lt;br&gt;&lt;br&gt;
+
+WEBSITE: &lt;a href=&#34;https://www.itsnotagameillinois.com&#34; target=&#34;_blank&#34;&gt;It&#39;s not a game&lt;/a&gt; - more unblocked&lt;br&gt;&lt;br&gt;
+
+WEBSITE: &lt;a href=&#34;https://nettleweb.pages.dev&#34; target=&#34;_blank&#34;&gt;nettleweb&lt;/a&gt; - only flash games work, also GOOD CHAT!!&lt;br&gt;&lt;br&gt;
+
+WEBSITE: &lt;a href=&#34;https://sites.google.com/view/nblocked/home&#34; target=&#34;_blank&#34;&gt;Nblocked Games&lt;/a&gt; - games&lt;br&gt;&lt;br&gt;
+
+WEBSITE: &lt;a href=&#34;https://sites.google.com/site/yourunblockedgames&#34; target=&#34;_blank&#34;&gt;Unblocked Games&lt;/a&gt; - some good unblocked games&lt;br&gt;&lt;br&gt;
+
+WEBSITE: &lt;a href=&#34;https://iammister1.github.io/unblocked-games-21&#34; target=&#34;_blank&#34;&gt;Unblocked Games 21&lt;/a&gt; - wow, a very good collection&lt;br&gt;&lt;br&gt;
+
+WEBSITE: &lt;a href=&#34;https://bighummus69.github.io/simplegimes&#34; target=&#34;_blank&#34;&gt;SimpleGime&lt;/a&gt; - REALLY GOOD CHECK IT OUT&lt;br&gt;&lt;br&gt;
+
+WEBSITE: &lt;a href=&#34;https://jetyehs.github.io&#34; target=&#34;_blank&#34;&gt;Jet Yeh&#39;s&lt;/a&gt; - im gonna stop making these captions unless theres something important&lt;br&gt;&lt;br&gt;
+
+WEBSITE: &lt;a href=&#34;https://wip-main.github.io/gameboy-games.html&#34; target=&#34;_blank&#34;&gt;WIP&lt;/a&gt;&lt;br&gt;&lt;br&gt;
+
+WEBSITE: &lt;a href=&#34;https://hypackellite1.github.io&#34; target=&#34;_blank&#34;&gt;Hypackel&lt;/a&gt;&lt;br&gt;&lt;br&gt;
+
+WEBSITE: &lt;a href=&#34;https://3kho.github.io&#34; target=&#34;_blank&#34;&gt;3kho&lt;/a&gt;&lt;br&gt;&lt;br&gt;
+
+WEBSITE: &lt;a href=&#34;https://ovo-games-online.github.io&#34; target=&#34;_blank&#34;&gt;OvO Games Online&lt;/a&gt; - kinda like OvOclassic-pro&lt;br&gt;&lt;br&gt;
+
+WEBSITE: &lt;a href=&#34;https://fivenightsatfreddysonline.github.io&#34; target=&#34;_blank&#34;&gt;Five Night&#39;s at Freddys Unblocked&lt;/a&gt; - ovo classic ui&lt;br&gt;&lt;br&gt;
+
+WEBSITE: &lt;a href=&#34;https://minecraftunblocked.gitlab.io&#34; target=&#34;_blank&#34;&gt;Minecraft Unblocked&lt;/a&gt; - BEST EAGLERCRAFT HUB!!!!!!!!! WOULD RECOMMEND!!&lt;br&gt;&lt;br&gt;
+`;
+    } else {
+        message.innerHTML = &#34;Incorrect password.&#34;;
+    }
+}
+
+// Helper function to generate a SHA-256 hash.
+// Open your browser console and run:
+// generateHash(&#34;yourPassword&#34;);
+async function generateHash(password) {
+    console.log(await sha256(password));
+}
+    </script>
+  </body>
+</html>
