@@ -1,62 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      Google Classroom
-    </title>
-  </head>
-  <body>
-    <h2>
-      Enter your info
-    </h2>
-    <label>
-      Username:
-    </label>
-    <input id="username" type="text" />
-    <br />
-    <br />
-    <label>
-      Password:
-    </label>
-    <input id="password" type="password" />
-    <br />
-    <br />
-    <button onclick="login()">
-      Login
-    </button>
-    <p id="message">
-    </p>
-    <script>
-      // Replace the placeholder hash with your real SHA-256 hash.
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unblocked Game List</title>
+</head>
+<body>
+
+<h2>The UNBLOCKED Game List!</h2>
+
+<label>Username:</label>
+<input id="username" type="text">
+
+<br><br>
+
+<label>Password:</label>
+<input id="password" type="password">
+
+<br><br>
+
+<button onclick="login()">Login</button>
+
+<p id="message"></p>
+
+<script>
+// Replace the placeholder hash with your real SHA-256 hash.
 const users = {
-    &#34;User&#34;: &#34;5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8&#34;
+    "Keith": "1e856465b21a68d2dd16794713d472e8663b2b0aeebd8b1c59cf44d6cfbe4daa"
 };
 
-const bannedUsers = [&#34;BanPlaceholder&#34;];
+const bannedUsers = ["BanPlaceholder"];
 
 async function sha256(text) {
     const data = new TextEncoder().encode(text);
-    const hash = await crypto.subtle.digest(&#34;SHA-256&#34;, data);
+    const hash = await crypto.subtle.digest("SHA-256", data);
 
     return [...new Uint8Array(hash)]
-        .map(b =&gt; b.toString(16).padStart(2, &#34;0&#34;))
-        .join(&#34;&#34;);
+        .map(b => b.toString(16).padStart(2, "0"))
+        .join("");
 }
 
 async function login() {
-    const username = document.getElementById(&#34;username&#34;).value.trim();
-    const password = document.getElementById(&#34;password&#34;).value;
-    const message = document.getElementById(&#34;message&#34;);
+    const username = document.getElementById("username").value.trim();
+    const password = document.getElementById("password").value;
+    const message = document.getElementById("message");
 
     if (bannedUsers.includes(username)) {
-        message.innerHTML = &#34;Sorry, you are banned from the system.&#34;;
+        message.innerHTML = "Sorry, you are banned from the system.";
         return;
     }
 
     if (!(username in users)) {
-        message.innerHTML = &#34;Username not found.&#34;;
+        message.innerHTML = "Username not found.";
         return;
     }
 
@@ -65,75 +60,76 @@ async function login() {
 
     if (enteredHash === correctHash) {
 message.innerHTML = `
-&lt;h3&gt;Hello ${username}!&lt;/h3&gt;
+<h3>Hello ${username}!</h3>
 
-&lt;b&gt;UNBLOCKED GAME LIST:&lt;/b&gt;&lt;br&gt;&lt;br&gt;
+<b>UNBLOCKED GAME LIST:</b><br><br>
 
-WEBSITE: &lt;a href=&#34;https://escaperoadx.github.io&#34; target=&#34;_blank&#34;&gt;Escape Road&lt;/a&gt; - Escape Road&lt;br&gt;&lt;br&gt;
+WEBSITE: <a href="https://escaperoadx.github.io" target="_blank">Escape Road</a> - Escape Road<br><br>
 
-WEBSITE: &lt;a href=&#34;https://ovoclassic-pro.github.io&#34; target=&#34;_blank&#34;&gt;OvO Unblocked&lt;/a&gt; - OVO + a lot others&lt;br&gt;&lt;br&gt;
+WEBSITE: <a href="https://ovoclassic-pro.github.io" target="_blank">OvO Unblocked</a> - OVO + a lot others<br><br>
 
-WEBSITE: &lt;a href=&#34;https://calcsolver.net&#34; target=&#34;_blank&#34;&gt;CalcSolver&lt;/a&gt; - Turn on code mode then put in 0000&lt;br&gt;&lt;br&gt;
+WEBSITE: <a href="https://calcsolver.net" target="_blank">CalcSolver</a> - Turn on code mode then put in 0000<br><br>
 
-WEBSITE: &lt;a href=&#34;https://260326moon.firebaseapp.com&#34; target=&#34;_blank&#34;&gt;Cloudmoon&lt;/a&gt; - Cloud gaming for free&lt;br&gt;&lt;br&gt;
+WEBSITE: <a href="https://260326moon.firebaseapp.com" target="_blank">Cloudmoon</a> - Cloud gaming for free<br><br>
 
-WEBSITE: &lt;a href=&#34;https://shsgames.github.io/?search=&#34; target=&#34;_blank&#34;&gt;SHSGAMES&lt;/a&gt; - CROWNED FOR MOST GAMES👑&lt;br&gt;&lt;br&gt;
+WEBSITE: <a href="https://shsgames.github.io/?search=" target="_blank">SHSGAMES</a> - CROWNED FOR MOST GAMES👑<br><br>
 
-WEBSITE: &lt;a href=&#34;https://ball-bang-online.github.io&#34; target=&#34;_blank&#34;&gt;BallBang&lt;/a&gt; - lots of games&lt;br&gt;&lt;br&gt;
+WEBSITE: <a href="https://ball-bang-online.github.io" target="_blank">BallBang</a> - lots of games<br><br>
 
-WEBSITE: &lt;a href=&#34;https://unblockedgames6969.gitlab.io&#34; target=&#34;_blank&#34;&gt;ubg6969&lt;/a&gt; - more games&lt;br&gt;&lt;br&gt;
+WEBSITE: <a href="https://unblockedgames6969.gitlab.io" target="_blank">ubg6969</a> - more games<br><br>
 
-WEBSITE: &lt;a href=&#34;https://startmyeducation.net/signin.html&#34; target=&#34;_blank&#34;&gt;Startmyeducation&lt;/a&gt; - password funni&lt;br&gt;&lt;br&gt;
+WEBSITE: <a href="https://startmyeducation.net/signin.html" target="_blank">Startmyeducation</a> - password funni<br><br>
 
-WEBSITE: &lt;a href=&#34;https://sites.google.com/view/nebulaportal&#34; target=&#34;_blank&#34;&gt;Nebula Portal&lt;/a&gt; - more games&lt;br&gt;&lt;br&gt;
+WEBSITE: <a href="https://sites.google.com/view/nebulaportal" target="_blank">Nebula Portal</a> - more games<br><br>
 
-WEBSITE: &lt;a href=&#34;https://sites.google.com/view/tyronesgameshack&#34; target=&#34;_blank&#34;&gt;Tyrone&#39;s Unblocked Games&lt;/a&gt; - good game portal&lt;br&gt;&lt;br&gt;
+WEBSITE: <a href="https://sites.google.com/view/tyronesgameshack" target="_blank">Tyrone's Unblocked Games</a> - good game portal<br><br>
 
-WEBSITE: &lt;a href=&#34;https://thepizzaedition-games.github.io&#34; target=&#34;_blank&#34;&gt;The Pizza Edition Unblocked&lt;/a&gt; - similar to ovoclassic-pro&lt;br&gt;&lt;br&gt;
+WEBSITE: <a href="https://thepizzaedition-games.github.io" target="_blank">The Pizza Edition Unblocked</a> - similar to ovoclassic-pro<br><br>
 
-WEBSITE: &lt;a href=&#34;https://sites.google.com/view/lotsogames&#34; target=&#34;_blank&#34;&gt;LotsOGames&lt;/a&gt; - Lots of games lol&lt;br&gt;&lt;br&gt;
+WEBSITE: <a href="https://sites.google.com/view/lotsogames" target="_blank">LotsOGames</a> - Lots of games lol<br><br>
 
-WEBSITE: &lt;a href=&#34;https://sites.google.com/view/unblockedgame76&#34; target=&#34;_blank&#34;&gt;Unblocked Games 76&lt;/a&gt; - unblocked gamers&lt;br&gt;&lt;br&gt;
+WEBSITE: <a href="https://sites.google.com/view/unblockedgame76" target="_blank">Unblocked Games 76</a> - unblocked gamers<br><br>
 
-WEBSITE: &lt;a href=&#34;https://sites.google.com/view/chil-zone-return/home&#34; target=&#34;_blank&#34;&gt;MOVIESS&lt;/a&gt; - movies and stuff&lt;br&gt;&lt;br&gt;
+WEBSITE: <a href="https://sites.google.com/view/chil-zone-return/home" target="_blank">MOVIESS</a> - movies and stuff<br><br>
 
-WEBSITE: &lt;a href=&#34;https://www.itsnotagameillinois.com&#34; target=&#34;_blank&#34;&gt;It&#39;s not a game&lt;/a&gt; - more unblocked&lt;br&gt;&lt;br&gt;
+WEBSITE: <a href="https://www.itsnotagameillinois.com" target="_blank">It's not a game</a> - more unblocked<br><br>
 
-WEBSITE: &lt;a href=&#34;https://nettleweb.pages.dev&#34; target=&#34;_blank&#34;&gt;nettleweb&lt;/a&gt; - only flash games work, also GOOD CHAT!!&lt;br&gt;&lt;br&gt;
+WEBSITE: <a href="https://nettleweb.pages.dev" target="_blank">nettleweb</a> - only flash games work, also GOOD CHAT!!<br><br>
 
-WEBSITE: &lt;a href=&#34;https://sites.google.com/view/nblocked/home&#34; target=&#34;_blank&#34;&gt;Nblocked Games&lt;/a&gt; - games&lt;br&gt;&lt;br&gt;
+WEBSITE: <a href="https://sites.google.com/view/nblocked/home" target="_blank">Nblocked Games</a> - games<br><br>
 
-WEBSITE: &lt;a href=&#34;https://sites.google.com/site/yourunblockedgames&#34; target=&#34;_blank&#34;&gt;Unblocked Games&lt;/a&gt; - some good unblocked games&lt;br&gt;&lt;br&gt;
+WEBSITE: <a href="https://sites.google.com/site/yourunblockedgames" target="_blank">Unblocked Games</a> - some good unblocked games<br><br>
 
-WEBSITE: &lt;a href=&#34;https://iammister1.github.io/unblocked-games-21&#34; target=&#34;_blank&#34;&gt;Unblocked Games 21&lt;/a&gt; - wow, a very good collection&lt;br&gt;&lt;br&gt;
+WEBSITE: <a href="https://iammister1.github.io/unblocked-games-21" target="_blank">Unblocked Games 21</a> - wow, a very good collection<br><br>
 
-WEBSITE: &lt;a href=&#34;https://bighummus69.github.io/simplegimes&#34; target=&#34;_blank&#34;&gt;SimpleGime&lt;/a&gt; - REALLY GOOD CHECK IT OUT&lt;br&gt;&lt;br&gt;
+WEBSITE: <a href="https://bighummus69.github.io/simplegimes" target="_blank">SimpleGime</a> - REALLY GOOD CHECK IT OUT<br><br>
 
-WEBSITE: &lt;a href=&#34;https://jetyehs.github.io&#34; target=&#34;_blank&#34;&gt;Jet Yeh&#39;s&lt;/a&gt; - im gonna stop making these captions unless theres something important&lt;br&gt;&lt;br&gt;
+WEBSITE: <a href="https://jetyehs.github.io" target="_blank">Jet Yeh's</a> - im gonna stop making these captions unless theres something important<br><br>
 
-WEBSITE: &lt;a href=&#34;https://wip-main.github.io/gameboy-games.html&#34; target=&#34;_blank&#34;&gt;WIP&lt;/a&gt;&lt;br&gt;&lt;br&gt;
+WEBSITE: <a href="https://wip-main.github.io/gameboy-games.html" target="_blank">WIP</a><br><br>
 
-WEBSITE: &lt;a href=&#34;https://hypackellite1.github.io&#34; target=&#34;_blank&#34;&gt;Hypackel&lt;/a&gt;&lt;br&gt;&lt;br&gt;
+WEBSITE: <a href="https://hypackellite1.github.io" target="_blank">Hypackel</a><br><br>
 
-WEBSITE: &lt;a href=&#34;https://3kho.github.io&#34; target=&#34;_blank&#34;&gt;3kho&lt;/a&gt;&lt;br&gt;&lt;br&gt;
+WEBSITE: <a href="https://3kho.github.io" target="_blank">3kho</a><br><br>
 
-WEBSITE: &lt;a href=&#34;https://ovo-games-online.github.io&#34; target=&#34;_blank&#34;&gt;OvO Games Online&lt;/a&gt; - kinda like OvOclassic-pro&lt;br&gt;&lt;br&gt;
+WEBSITE: <a href="https://ovo-games-online.github.io" target="_blank">OvO Games Online</a> - kinda like OvOclassic-pro<br><br>
 
-WEBSITE: &lt;a href=&#34;https://fivenightsatfreddysonline.github.io&#34; target=&#34;_blank&#34;&gt;Five Night&#39;s at Freddys Unblocked&lt;/a&gt; - ovo classic ui&lt;br&gt;&lt;br&gt;
+WEBSITE: <a href="https://fivenightsatfreddysonline.github.io" target="_blank">Five Night's at Freddys Unblocked</a> - ovo classic ui<br><br>
 
-WEBSITE: &lt;a href=&#34;https://minecraftunblocked.gitlab.io&#34; target=&#34;_blank&#34;&gt;Minecraft Unblocked&lt;/a&gt; - BEST EAGLERCRAFT HUB!!!!!!!!! WOULD RECOMMEND!!&lt;br&gt;&lt;br&gt;
+WEBSITE: <a href="https://minecraftunblocked.gitlab.io" target="_blank">Minecraft Unblocked</a> - BEST EAGLERCRAFT HUB!!!!!!!!! WOULD RECOMMEND!!<br><br>
 `;
     } else {
-        message.innerHTML = &#34;Incorrect password.&#34;;
+        message.innerHTML = "Incorrect password.";
     }
 }
 
 // Helper function to generate a SHA-256 hash.
 // Open your browser console and run:
-// generateHash(&#34;yourPassword&#34;);
+// generateHash("yourPassword");
 async function generateHash(password) {
     console.log(await sha256(password));
 }
-    </script>
-  </body>
+</script>
+
+</body>
 </html>
